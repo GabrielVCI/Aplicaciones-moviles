@@ -6,7 +6,7 @@ const Calculadora: React.FC = () => {
 
     let [input, setInput] = useState<string>('');
 
-    if (input === "undefined"){
+    if (input === ""){
         input = "0";
     }
 

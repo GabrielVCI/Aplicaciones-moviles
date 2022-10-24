@@ -4,7 +4,6 @@ import { useState } from 'react';
 
 const Sumadora: React.FC = () => {
 
-    const [text, setText] = useState<string>();
     const [number, setNumber] = useState<number>();
     const [number2, setNumber2] = useState<number>();
 
@@ -15,13 +14,17 @@ const Sumadora: React.FC = () => {
     const Sumar = () => {
         const numero1 = number;
         const numero2 = number2;
+        const sonIguales = "Son Iguales";
+
         if(!numero1 || !numero2){
             return;
         }
-        
-        const result = +numero1 + +numero2;
-        Resultado(result);
+        numero1 > numero2 ? Resultado(numero1) : Resultado(numero2);
+        // const result = +numero1 + +numero2;
+        // Resultado(result);
     }
+
+ 
     return (
         <IonPage>
             <IonHeader>
@@ -41,7 +44,7 @@ const Sumadora: React.FC = () => {
                         <IonLabel>Ingrese los numeros que quiere sumar</IonLabel>
                 <IonInput type="number" value={number} placeholder="Ingrese un numero" onIonChange={e => setNumber(parseInt(e.detail.value!, 10))}></IonInput>
                 <IonInput type="number" value={number2} placeholder="Ingrese el otro numero" onIonChange={e => setNumber2(parseInt(e.detail.value!, 10))}></IonInput>      
-                <IonButton onClick={Sumar}>Sumar</IonButton>
+                <IonButton onClick={Sumar}>Obtener el mayor</IonButton>
                 
                 {calculoDeIMC && (
                     <IonRow>
