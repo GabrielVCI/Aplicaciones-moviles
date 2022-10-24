@@ -11,7 +11,7 @@ import { pin, wifi, wine, warning, walk } from 'ionicons/icons';
 */
 
 
-export const Presentacion: React.FC = () => {
+export const Contratame: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
@@ -19,7 +19,7 @@ export const Presentacion: React.FC = () => {
         <IonButtons slot='start'>
                         <IonMenuButton/>
                     </IonButtons>
-          <IonTitle>Presentacion</IonTitle>
+          <IonTitle>Contratame</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent>
@@ -41,4 +41,4 @@ export const Presentacion: React.FC = () => {
   );
 };
 
-export default Presentacion;
+export default Contratame;

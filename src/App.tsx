@@ -22,10 +22,18 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import Presentacion from './pages/presentacion/presentacion';
-import Calculadora from './pages/calc/calculadora';
+
+import Contratame from './pages/Contratame/contratame';
+import Acerca_de from './pages/Acerca de/acerca-de';
+import Impacto from './pages/En mi vida/En-mi-vida';
+import Personajes from './pages/Personajes/personajes';
+import Portada from './pages/Portada/portada';
+import Momentos from './pages/Momentos/momentos';
+
 import {person, calculator, apps, logoYoutube, addOutline} from 'ionicons/icons'
-import Sumadora from './pages/ObtenerMayor/sumadora';
+
+
+
 import React from 'react';
 
 /*
@@ -38,13 +46,15 @@ import React from 'react';
 
 setupIonicReact();
 
+
+
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonMenu side='start' contentId='MenuApp'>
         <IonHeader>
           <IonToolbar>
-            <IonTitle>App with React + Ionic</IonTitle>
+            <IonTitle>Game Of Thrones</IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonContent>
@@ -52,19 +62,34 @@ const App: React.FC = () => (
 
          <IonMenuToggle>
           
-              <IonItem routerLink='/presentacion' routerDirection='none' lines='none'>
+              <IonItem routerLink='/portada' routerDirection='none' lines='none'>
                 <IonIcon color='medium' slot='start' icon={person}></IonIcon>
-                <IonLabel>Presentacion</IonLabel>            
+                <IonLabel>Portada</IonLabel>            
               </IonItem>
 
-              <IonItem routerLink='/sumadora' routerDirection='none' lines='none'>
+              <IonItem routerLink='/personajes' routerDirection='none' lines='none'>
+                <IonIcon color='medium' slot='start' icon={person}></IonIcon>
+                <IonLabel>Personajes</IonLabel>            
+              </IonItem>
+
+              <IonItem routerLink='/momentos' routerDirection='none' lines='none'>
+                <IonIcon color='medium' slot='start' icon={person}></IonIcon>
+                <IonLabel>Momentos</IonLabel>            
+              </IonItem>
+
+              <IonItem routerLink='/acerca-de' routerDirection='none' lines='none'>
                 <IonIcon color='medium' slot='start' icon={addOutline}></IonIcon>
-                <IonLabel>Obtener mayor numero</IonLabel>
+                <IonLabel>Acerca de</IonLabel>
               </IonItem>
 
-              <IonItem routerLink='/calculadora' routerDirection='none' lines='none'>
+              <IonItem routerLink='/En-mi-vida' routerDirection='none' lines='none'>
                 <IonIcon color='medium' slot='start' icon={calculator}></IonIcon>
-                <IonLabel>Calculadora</IonLabel>
+                <IonLabel>En mi vida</IonLabel>
+              </IonItem>
+
+              <IonItem routerLink='/contratame' routerDirection='none' lines='none'>
+                <IonIcon color='medium' slot='start' icon={person}></IonIcon>
+                <IonLabel>Contratame</IonLabel>            
               </IonItem>
   
             </IonMenuToggle>
@@ -72,10 +97,13 @@ const App: React.FC = () => (
         </IonContent>
       </IonMenu>
       <IonRouterOutlet id='MenuApp'>
-          <Route path="/presentacion" component={Presentacion} exact />
-          <Route path="/sumadora" component={Sumadora} exact />
-          <Route path="/calculadora" component={Calculadora} exact />
-          <Redirect to="/presentacion" />
+          <Route path="/portada" component={Portada} exact />
+          <Route path="/personajes" component={Personajes} exact />
+          <Route path="/momentos" component={Momentos} exact />
+          <Route path="/acerca-de" component={Acerca_de} exact />
+          <Route path="/en-mi-vida" component={Impacto} exact />
+          <Route path="/contratame" component={Contratame} exact />
+          <Redirect to="/portada" />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
@@ -105,7 +133,7 @@ export default App;
         </IonContent>
       </IonMenu>
           <IonRouterOutlet id="MenuApp">
-          <Route path="/calculadora" component={Calculadora} exact />
+          <Route path="/contratame" component={Contratame} exact />
 
           </IonRouterOutlet>
         

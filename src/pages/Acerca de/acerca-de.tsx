@@ -1,4 +1,4 @@
-import { IonPage, IonHeader, IonToolbar, IonButtons, IonTitle, IonContent, IonGrid, IonRow, IonCol, IonMenuButton, IonInput, IonLabel, IonButton, IonCard, IonCardContent } from '@ionic/react';
+/*import { IonPage, IonHeader, IonToolbar, IonButtons, IonTitle, IonContent, IonGrid, IonRow, IonCol, IonMenuButton, IonInput, IonLabel, IonButton, IonCard, IonCardContent } from '@ionic/react';
 import React, { useRef } from 'react';
 import { useState } from 'react';
 
@@ -65,4 +65,40 @@ const Sumadora: React.FC = () => {
     );
 };
 
-export default Sumadora;
+export default Sumadora;*/
+import React from 'react';
+import { IonSlides, IonSlide, IonContent, IonButtons, IonMenuButton, IonHeader, IonToolbar, IonTitle } from '@ionic/react';
+
+// Optional parameters to pass to the swiper instance.
+// See https://swiperjs.com/swiper-api for valid options.
+const slideOpts = {
+  initialSlide: 1,
+  speed: 400
+};
+
+export const Acerca_de: React.FC = () => (
+  <IonContent>
+            <IonHeader>
+        <IonToolbar>
+        <IonButtons slot='start'>
+                        <IonMenuButton/>
+                    </IonButtons>
+          <IonTitle>Acerca de</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+    <IonSlides pager={true} options={slideOpts}>
+      <IonSlide>
+        <h1>Slide 1</h1>
+      </IonSlide>
+      <IonSlide>
+        <h1>Slide 2</h1>
+      </IonSlide>
+      <IonSlide>
+        <h1>Slide 3</h1>
+      </IonSlide>
+    </IonSlides>
+  </IonContent>
+);
+
+export default Acerca_de;
+

@@ -1,4 +1,4 @@
-import { IonPage, IonHeader, IonToolbar, IonButtons, IonTitle, IonContent, IonGrid, IonRow, IonCol, IonMenuButton, IonInput, IonLabel } from '@ionic/react';
+/*import { IonPage, IonHeader, IonToolbar, IonButtons, IonTitle, IonContent, IonGrid, IonRow, IonCol, IonMenuButton, IonInput, IonLabel } from '@ionic/react';
 import React from 'react';
 import { useState } from 'react';
 
@@ -53,4 +53,40 @@ const Calculadora: React.FC = () => {
     );
 };
 
-export default Calculadora;
+export default Calculadora;  */
+
+import React from 'react';
+import { IonSlides, IonSlide, IonContent, IonButtons, IonMenuButton, IonHeader, IonToolbar, IonTitle } from '@ionic/react';
+
+// Optional parameters to pass to the swiper instance.
+// See https://swiperjs.com/swiper-api for valid options.
+const slideOpts = {
+  initialSlide: 1,
+  speed: 400
+};
+
+export const Impacto: React.FC = () => (
+  <IonContent>
+           <IonHeader>
+        <IonToolbar>
+        <IonButtons slot='start'>
+                        <IonMenuButton/>
+                    </IonButtons>
+          <IonTitle>Impacto en mi vida</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+    <IonSlides pager={true} options={slideOpts}>
+      <IonSlide>
+        <h1>Slide 1</h1>
+      </IonSlide>
+      <IonSlide>
+        <h1>Slide 2</h1>
+      </IonSlide>
+      <IonSlide>
+        <h1>Slide 3</h1>
+      </IonSlide>
+    </IonSlides>
+  </IonContent>
+);
+
+export default Impacto;
