@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-card style="margin: 20px;">
+    <ion-card-header style="display: flex; align-items: center; flex-direction: column;">
+      <ion-card-title>Login</ion-card-title>
+    </ion-card-header>
+  
+    <form [formGroup]="formularioLogin">
+    <ion-item>
+      <ion-label position="floating">Cedula</ion-label>
+      <ion-input formControlName="cedula" placeholder="Enter ID"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input formControlName="password" type="password" placeholder="Enter password"></ion-input>
+    </ion-item>
+  
+    <ion-button expand="block" style="margin: 10px;" (click)="Ingresar()">Ingresar</ion-button>
+  </form>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Albergues</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <h2>Lista de albergues en la Republica Dominicana</h2>
+  <ion-list>
+    <ion-accordion-group>
+      <ion-accordion *ngFor="let albergue of albergues"  value="{{albergue['codigo']}}">
+        <ion-item slot="header" color="light">
+          <ion-label>Albergue en {{albergue["ciudad"]}}</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          
+          <ion-list>
+            <h3>Capacidad: {{albergue["capacidad"]}}</h3>
+
+            <h3>Codigo: {{albergue["codigo"]}}</h3>
+
+            <h3>Coordinador: {{albergue["coordinador"]}}</h3>
+
+            <h3>Edificio: {{albergue["edificio"]}}</h3>
+
+            <h3>Telefono: {{albergue["telefono"]}}</h3>
+
+            <h3>Longitud: {{albergue["lat"]}}</h3>
+
+            <h3>Latitud: {{albergue["lng"]}}</h3>
+          </ion-list>
+        </div>
+ 
+      </ion-accordion>
+    </ion-accordion-group>
+  </ion-list>
+
+  <!-- <div class="container">
+    <capacitor-google-map></capacitor-google-map>
+  </div> -->
+
+  <style>
+    capacitor-google-map {
+  display: inline-block;
+  width: 100%;
+  height: 70vh;
+}
+
+  </style>
+</ion-content>

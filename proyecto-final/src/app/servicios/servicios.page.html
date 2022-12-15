@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="#FF8000">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Servicios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  
+  <ion-list>
+    <ion-item *ngFor="let service of services">
+        <div class="services">
+          <ion-card>
+            <img src="{{service['foto']}}" alt="FOTO" width="90%" style="margin: auto;">
+            <ion-card-header>
+              <ion-card-title style="font-size: 30px;">{{service["nombre"]}}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content style="font-size: 25px;">
+              {{service["descripcion"]}}
+            </ion-card-content>
+          </ion-card>
+          
+        </div>
+
+        <hr>
+    </ion-item>
+  </ion-list>
+
+
+
+</ion-content>
